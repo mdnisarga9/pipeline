@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    triggers { cron('H 18 * * *') }   
+    environment {
+        BACKUP_DIR = "/tmp/jenkins_backup"
+        GIT_REPO = "https://github.com/mdnisarga9/pipeline.git"
+    }
+    stages {
+        stage('Backup Jenkins') {
+            steps {
+                sh '''
+                    rm -rf $BACKUP_DIR
+                    mkdir -p $BACKUP_DIR
+                    tar -czf $BACKUP_DIR/jenkins_backup_$(date +%F_%H-%M).tar.gz -C $JENKINS_HOME .
+                '''
+            }
+        }
+        stage('Push to GitHub') {
+            steps {
+                sh '''
+                    cd /tmp
+                    rm -rf repo_clone
+                    git clone $GIT_REPO repo_clone
+                    cp $BACKUP_DIR/*.tar.gz repo_clone/
+
+                    cd repo_clone
+                    git config user.email "mdnisarga2@gmail.com"
+                    git config user.name "Jenkins Backup Bot"
+
+                    git add .
+                    git commit -m "Jenkins backup on $(date)"
+                    git push origin main || git push origin master
+                '''
+            }
+        }
+    }
+}
