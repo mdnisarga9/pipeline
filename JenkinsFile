@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    triggers { 
-        cron('15 18 * * *')   // runs every day at 18:15 (6:15 PM)
-    }
     environment {
         BACKUP_DIR = "/tmp/jenkins_backup"
         GIT_REPO = "git@github.com:mdnisarga9/pipeline.git"
