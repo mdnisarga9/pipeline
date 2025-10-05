@@ -1,0 +1,20 @@
+commit 306df3b63fff437a008a5fde5af112e61c6e9e41
+tree fef7ee771f29537d3e83ee0c12ea54aec0fc52f4
+parent 90d0397a2c073b53a56d133c4a19fa3bcfd81f44
+author Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal> 2025-10-03 12:39:14 +0000
+committer Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal> 2025-10-03 12:39:14 +0000
+
+    new commit1
+
+
+:100644 100644 0327fd01359f96ec02a8a719fc381ca2c6b77512 f403380887fd862c20b14a9ae12d4f87e2238744 M	JenkinsFile
+commit 90d0397a2c073b53a56d133c4a19fa3bcfd81f44
+tree a183bad01fc221ac1db4c56c38cd0efd4f7404d6
+parent e4938537855bd4301e8332320c79a69f95c8fb2b
+author Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal> 2025-10-03 12:37:49 +0000
+committer Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal> 2025-10-03 12:37:49 +0000
+
+    new commit
+
+
+:100644 100644 09f7a9d0c42a9d90c0061d2139a497a1408547e9 0327fd01359f96ec02a8a719fc381ca2c6b77512 M	JenkinsFile

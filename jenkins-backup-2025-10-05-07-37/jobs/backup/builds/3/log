@@ -1,0 +1,105 @@
+Started by user [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+Obtained JenkinsFile from git https://github.com/mdnisarga9/pipeline.git
+[8mha:////4Lm/4rSuyeiIkPWoWky8quL1R1/n2WRlLYnIMLWLp0+zAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4CJOPoFKssfIEKHEFUswFCCEWYZMkGmJr1qvkxwY1fZhAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4K6UOVoJ6KylJwT0iHz3JTWHMjvw+v3vKHFxe+kk/ZI4AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/lib/jenkins/workspace/backup
+[8mha:////4MTImi2PVAe/O9CF+0A/Mkl3mgdNJr66ufGAsXGCsKV4AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4ArmYIHtgBDwjRVJnOpYmZ0ttJopwW26d0rW5wJgZoTQAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4ALWL6Q9Ke1FggqTWM6kUvBiqLGwntPPLTNWWZOXSa3/AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4MxK7TVd0GxmB8TWfOepMlFyege9XjhUuA1HzDf/ASFkAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/backup/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mdnisarga9/pipeline.git # timeout=10
+Fetching upstream changes from https://github.com/mdnisarga9/pipeline.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/mdnisarga9/pipeline.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 306df3b63fff437a008a5fde5af112e61c6e9e41 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 306df3b63fff437a008a5fde5af112e61c6e9e41 # timeout=10
+Commit message: "new commit1"
+ > git rev-list --no-walk e4938537855bd4301e8332320c79a69f95c8fb2b # timeout=10
+[8mha:////4GQVjkDEc9nNQKSj/Y+6jubztAdVcMRSlhnW3cUUYLqFAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4Gr7V58Rq+P3qkVP4WFcxGg09kFvVtQiihPypAzBAbOQAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4CsCMjEXSn8V+ywhwiMgw2UVIE6aSyjEcUYsIuEKtWXPAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4A+oPEyR7tXuCRLwdbGmKvdmJLR/NCeGtR8a5x+dIqAnAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4EgnsjyCCXiuep0aYshO+B/24q4oIKLrIeQ/4I3vCMClAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] withEnv
+[8mha:////4H/oQtkr1S1GWgou6sHRt0C7LXkQeXQ5ydtmKH5AFYXmAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] {
+[8mha:////4MdlfBERbULbL8f7bmWafWJMOmlm/Y3isFiJQeg2vORaAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAbNWnxXCAAAA[0m[Pipeline] stage
+[8mha:////4Hg/5Y/mzA531cUV7g1hEYzNyFKtpqFMVYU+tsl6jQT5AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUSDAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD5WQ+PfCAAAA[0m[Pipeline] { (Backup Jenkins)
+[8mha:////4GQaAhk0lt3d0wiP2bha6tFQXI39YX8Iv/TTp7zM6/q1AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCmgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN7LjSKW+AAAA[0m[Pipeline] sh
++ rm -rf /tmp/jenkins_backup
++ mkdir -p /tmp/jenkins_backup
+++ date +%F_%H-%M
++ tar -czf /tmp/jenkins_backup/jenkins_backup_2025-10-03_12-39.tar.gz -C /var/lib/jenkins .
+[8mha:////4H8selLvvfPMl8z84F+sUo7mVpofRRIPlrQuk1YMYjkEAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCkSBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQGOY4V7vgAAAA==[0m[Pipeline] }
+[8mha:////4IaCSXDK1scvC4++fMgOVqcXyb8DoDY83hV/5LhYkuWKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJAokRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyu//U7g3N4dT9vgAAAA==[0m[Pipeline] // stage
+[8mha:////4KcTiqhds46rlWIkhPpjXkCWuuP9U0yS+bUXH42fCf4ZAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUiAkhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD21FAanCAAAA[0m[Pipeline] stage
+[8mha:////4Ng4rc/hXsiv7CYkblmlG63+pHwNIeolTpjl1V7mFwNSAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogU2BDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrN7xWSV3CAAAA[0m[Pipeline] { (Push to GitHub)
+[8mha:////4LzF6Iftj2auiZE7eh3W/osHev7L/eOg5RoL2/8JvowlAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICtIgqreWGF5jYGCfWnbEdkooX8TX+QCASFVusdraZ5wuWKcKRo8XWUOcoNQ6D7+20cODYXTwP2PIZG6bE3qA0g2Rt6hklZwNzihIWAlaGGs/Jkc2wFq26q8orstUpx+k7CCidvsEDCjGZs4r5C2OEzbXXienn+SuAMWQo99tP7cIbaOP4NL4AAAA=[0m[Pipeline] sh
++ cd /tmp
++ rm -rf repo_clone
++ git clone git@github.com:mdnisarga9/pipeline.git repo_clone
+Cloning into 'repo_clone'...
++ cp /tmp/jenkins_backup/jenkins_backup_2025-10-03_12-39.tar.gz repo_clone/
++ cd repo_clone
++ git config user.email mdnisarga2@gmail.com
++ git config user.name 'Jenkins Backup Bot'
++ git add .
+++ date
++ git commit -m 'Jenkins backup on Fri Oct  3 12:40:07 UTC 2025'
+[main d09a0f2] Jenkins backup on Fri Oct  3 12:40:07 UTC 2025
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 jenkins_backup_2025-10-03_12-39.tar.gz
++ git push origin main
+Resuming build at Fri Oct 03 12:56:10 UTC 2025 after Jenkins restart
+Ready to run at Fri Oct 03 12:56:10 UTC 2025
+Connection to github.com closed by remote host.
+Pausing
+Sending interrupt signal to process
+Aborted by [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+[8mha:////4GBz9yr4SVQbcBCtPKD8tjL4xBKjGbDAjRyf1WJ61DQlAAAA9h+LCAAAAAAAAP9djDFOwzAUhl9SwYwYKzYmludCVFqKOsEAUlUqlQukwThOjP2wn2lZOATXoAsSV+AQXICtMwMLQZngX/5v+b71BraCh3PnFVbS1tqGQiOZqBrCpfP1rXFLDJHIecbAkgJqS5FxdjW/vngk6Y229dSx3PnovH0Nvj9TSCbQid4w7E6q/CEXJrdKzNlrq05XHvbKeBOcxcLZ4IzEP5Xj8cvr+JneU0gvYdtIq7hsc/fwBEmjd//pZ+3/ytAuSQFW1AAyJPsMByUzjYQ4zPAo6+OgjyejYW/YE5VbiEVe1JFEJlj6ux+COOk8EAEAAA==[0mClick here to forcibly terminate running steps
+After 20s process did not stop
+Resuming build at Sat Oct 04 05:30:57 UTC 2025 after Jenkins restart
+Still paused
+Resuming build at Sat Oct 04 06:38:37 UTC 2025 after Jenkins restart
+Still paused
+Aborted by [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+Aborted by [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+[8mha:////4FAUcGCRrhU3G4YLjWEzZWS7gkeqdUIdR7U8AanUDIYWAAAA9h+LCAAAAAAAAP9djDFOwzAUhl9SwYw6IjY2hudERbQq6gQDSBUglQukwXWcGPthP9OycAiuAUulXoFDcAE2ZgaWBmWCf/m+5fvfvmAneDh3XmEtbaNtKDWSiao1XDrfLIxbYohEzjMGlhRQW4qMN9ez24snkt5o21w5lnsfvc338OczhWQKvegNQ39aF4+FMIVVYsZeW3W68nBQxbvgLJbOBmck/nk5mbyuJy/0nkJ6CbtGWsVVd/cAz5C0+f6//KzjbwzdkhRgRa0gQ3LIcFQx01iIAeZ5hsctsnw8ykaZqN1czIuyiSQGgqW/3wIIOilvEQEAAA==[0mClick here to forcibly terminate running steps
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+ERROR: node block appears to be neither running nor scheduled; will cancel if this condition persists
+ERROR: node block still appears to be neither running nor scheduled; cancelling
+Resuming build at Sat Oct 04 07:53:21 UTC 2025 after Jenkins restart
+Still paused
+Resuming
+[8mha:////4PMqt+baccpUtNER4SxLi1FHmIKa9gY8zC/qzt6V8wMHAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJu8TlHX9qf0b7E/nQb4AAAA=[0m[Pipeline] }
+[8mha:////4Ktjcae9dVZ11oI0OKu33O1Q2thc0AW3VE36mM66cBMHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdPtf28AEud0rYvgAAAA==[0m[Pipeline] // stage
+[8mha:////4P1ItGVLzx0ravcGOwS5m8uri+utr25NWghJ/Pq8YP3HAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEA1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw+WR0/FvgAAAA==[0m[Pipeline] // stage
+[8mha:////4GW+njv/O+53kb0AS0GlIBMoE8+zR+epI0SOYZhkWsfTAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdIdd2/wEtfcbuvgAAAA==[0m[Pipeline] }
+[8mha:////4Kao6SK8N3HfGW1pe8vyZ+CGHuLNQs3vts/uUrp3ZQKEAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRKWgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrQ659/QEVP1UfvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4HjE6Un7pVfSD+W4MHs5AmU9iFtiTBl/xZxE+BPuaYcLAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRaSgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrQ659/QGw7AnUvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4G91jE4GddqBL7Pk0DzR5GvptqU+rGBef41b2lGJbffuAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKiUCEhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3h1x1/QHfD1a8vgAAAA==[0m[Pipeline] }
+[8mha:////4EEHTllRrT9XCS3/ZGwdaVXk1NlEIF/7jXqdLYXPPitCAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICdAilorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYhQrk/5NptP+zsDQC+AAAA[0m[Pipeline] // withEnv
+[8mha:////4G5LfggQiZeVHyZU5kjJczjb1zj1k/zgD7POnBQwGt9oAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOISRImo0lppeIGJjXFi3RnbIal4EV/jD1hEomKL1c4283rDOgY4cTDYaxosxc6id6PJCycOw9XxhD1fsGOK7DS2empZ6WbBlpOGJUUJKwEbTZ3jaMkk2IpePmTlJJnqnEL+jgJKq+7whEJkc5IhfWEOsLuNKjL9PH8FMHufoDzUufb1B5C2dYG+AAAA[0m[Pipeline] // withEnv
+[8mha:////4CnnH5VAxTE6FgcUzEF+6tj04zRqk5BSYFMVKRa/lbgOAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRgg5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Q77aCbP8BPqPtor0AAAA=[0m[Pipeline] }
+[8mha:////4ILbJxYtKu1Ugv3NzZJbnryqaogjocOqpVNsSadMbuL0AAAAoh+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkMhon14bFL6hQa6F5D9uHMPlF/pr/IJHEyTvdc5bzemOdIo4cnWotdZ5S7VUfBjc/NXLsroFH1fJF1UyJg1WVHStu7GnBisViWZZjpbGxVAdOnpxgq1vzMEUw5IqzxNkdNHLf3PFEpueymChfmCJ2t6FJTL/O3wCmvhfk5V6QlR9NTCl7vQAAAA==[0m[Pipeline] // node
+[8mha:////4HC1kcinptXpavqfQcqJSNMl7d2beSagAxHDzVuja6eNAAAAoh+LCAAAAAAAAP9tjTESgjAQRT84FraWHiIUlI6VbYbGE0SIMZDZhWQRKk/k1byDjMxY+av/XvNeb2xTxImjU62lzlOqverD6JanJo7dLfCkWr6qmilxsKqyU8WNPa9YsVisy3JsNHaW6sDJkxPsdWsepgiGXHGRuLijRu6bAU9keimLifKFOeJwH5vE9Ov8DWDue0FeloKs/AD9ZUlGvQAAAA==[0m[Pipeline] // node
+[8mha:////4E02MAPMa00Y9Tos7FpURszmD/3bXQvcoURTno6qDoN7AAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRgA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Q7/aCbPsBe4lug70AAAA=[0m[Pipeline] End of Pipeline
+org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 8151dad7-dad0-416e-9536-2e880a6409f3
+Finished: ABORTED

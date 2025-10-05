@@ -1,0 +1,289 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1546.v62a_c59c112dd">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>nisarga</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.33-484.v2fcd689980d1">
+      <queuingDurationMillis>1</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>0</buildableDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@763.v13008816b_de7">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2273.v643f36ed9e94">
+      <stagesUUID>d04ea986-651f-4492-8065-803fb6a91761</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2273.v643f36ed9e94">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Backup Jenkins</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">
+                    rm -rf $BACKUP_DIR
+                    mkdir -p $BACKUP_DIR
+                    tar -czf $BACKUP_DIR/jenkins_backup_$(date +%F_%H-%M).tar.gz -C $JENKINS_HOME .
+                </value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Push to GitHub</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">
+                    cd /tmp
+                    rm -rf repo_clone
+                    git clone $GIT_REPO repo_clone
+                    cp $BACKUP_DIR/*.tar.gz repo_clone/
+
+                    cd repo_clone
+                    git config user.email &quot;mdnisarga2@gmail.com&quot;
+                    git config user.name &quot;Jenkins Backup Bot&quot;
+
+                    git add .
+                    git commit -m &quot;Jenkins backup on $(date)&quot;
+                    git push origin main || git push origin master
+                </value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>d04ea986-651f-4492-8065-803fb6a91761</uuid>
+          </stages>
+          <environment>
+            <variables class="linked-hash-map">
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>BACKUP_DIR</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">/tmp/jenkins_backup</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>GIT_REPO</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">https://github.com/mdnisarga9/pipeline.git</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+            </variables>
+          </environment>
+          <agent>
+            <agentType>
+              <key>any</key>
+            </agentType>
+          </agent>
+          <triggers>
+            <triggers>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTTrigger>
+                <name>cron</name>
+                <args>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                    <value class="string">H 18 * * *</value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                </args>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTTrigger>
+            </triggers>
+          </triggers>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <hudson.plugins.git.util.BuildData plugin="git@5.7.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/main</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@6.4.0">
+              <sha1>e4938537855bd4301e8332320c79a69f95c8fb2b</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/main</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>2</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://github.com/mdnisarga9/pipeline.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@452.vdf1ca_c8d3a_87">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/mdnisarga9/pipeline.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.33-484.v2fcd689980d1">
+      <queuingDurationMillis>6</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>3</buildableDurationMillis>
+      <waitingDurationMillis>1</waitingDurationMillis>
+      <executingDurationMillis>20888</executingDurationMillis>
+      <workUnitCount>1</workUnitCount>
+    </jenkins.metrics.impl.SubTaskTimeInQueueAction>
+  </actions>
+  <queueId>21</queueId>
+  <timestamp>1759494092153</timestamp>
+  <startTime>1759494092158</startTime>
+  <result>FAILURE</result>
+  <duration>22384</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>pipeline {&#xd;
+    agent any&#xd;
+    triggers { cron(&apos;H 18 * * *&apos;) }   &#xd;
+    environment {&#xd;
+        BACKUP_DIR = &quot;/tmp/jenkins_backup&quot;&#xd;
+        GIT_REPO = &quot;https://github.com/mdnisarga9/pipeline.git&quot;&#xd;
+    }&#xd;
+    stages {&#xd;
+        stage(&apos;Backup Jenkins&apos;) {&#xd;
+            steps {&#xd;
+                sh &apos;&apos;&apos;&#xd;
+                    rm -rf $BACKUP_DIR&#xd;
+                    mkdir -p $BACKUP_DIR&#xd;
+                    tar -czf $BACKUP_DIR/jenkins_backup_$(date +%F_%H-%M).tar.gz -C $JENKINS_HOME .&#xd;
+                &apos;&apos;&apos;&#xd;
+            }&#xd;
+        }&#xd;
+        stage(&apos;Push to GitHub&apos;) {&#xd;
+            steps {&#xd;
+                sh &apos;&apos;&apos;&#xd;
+                    cd /tmp&#xd;
+                    rm -rf repo_clone&#xd;
+                    git clone $GIT_REPO repo_clone&#xd;
+                    cp $BACKUP_DIR/*.tar.gz repo_clone/&#xd;
+&#xd;
+                    cd repo_clone&#xd;
+                    git config user.email &quot;mdnisarga2@gmail.com&quot;&#xd;
+                    git config user.name &quot;Jenkins Backup Bot&quot;&#xd;
+&#xd;
+                    git add .&#xd;
+                    git commit -m &quot;Jenkins backup on $(date)&quot;&#xd;
+                    git push origin main || git push origin master&#xd;
+                &apos;&apos;&apos;&#xd;
+            }&#xd;
+        }&#xd;
+    }&#xd;
+}&#xd;
+</script>
+    <loadedScripts class="linked-hash-map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>280709955</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>661012262</long>
+      </entry>
+      <entry>
+        <string>runQueue</string>
+        <long>1150039854</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1272658293</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>365410476</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>300430696</long>
+      </entry>
+    </timings>
+    <internalCalls class="sorted-set"/>
+    <sandbox>true</sandbox>
+    <iota>30</iota>
+    <head>1:30</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+    <storageDir>workflow-completed</storageDir>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@5.7.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/mdnisarga9/pipeline.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/main</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/backup</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/backup/builds/2/changelog12202811847872826547.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

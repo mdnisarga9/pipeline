@@ -1,0 +1,40 @@
+Started by user [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/c-project1
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/c-project1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mdnisarga9/c-project.git # timeout=10
+Fetching upstream changes from https://github.com/mdnisarga9/c-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/mdnisarga9/c-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 35465ae239290200697567de9b73dc4f672ce1d6 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 35465ae239290200697567de9b73dc4f672ce1d6 # timeout=10
+Commit message: "hello"
+ > git rev-list --no-walk 7af2a0890f04a84e5e06faa652f3f341ae5d4d8b # timeout=10
+[c-project1] $ /bin/sh -xe /tmp/jenkins10914196464198368092.sh
++ echo 'git commit'
+git commit
++ git log
+commit 35465ae239290200697567de9b73dc4f672ce1d6
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sat Sep 27 14:34:13 2025 +0000
+
+    hello
+
+commit 7af2a0890f04a84e5e06faa652f3f341ae5d4d8b
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Mon Sep 22 09:05:23 2025 +0000
+
+    c-project
+
+commit 0486202c1aae814e9b3ff74a8383ff53f9f98c99
+Author: mdnisarga2-coder <mdnisarga2@gmail.com>
+Date:   Mon Sep 22 14:27:48 2025 +0530
+
+    Create test file
+Finished: SUCCESS

@@ -1,0 +1,70 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <description>disaster recovery</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+set -eu
+
+# === Configuration ===
+BACKUP_DIR=&quot;/tmp/jenkins_backup&quot;
+DATE=$(date +%F_%H-%M-%S)
+BACKUP_FILE=&quot;jenkins_backup_${DATE}.tar.gz&quot;
+GIT_REPO=&quot;git@github.com:mdnisarga9/pipeline.git&quot;
+BRANCH=&quot;main&quot;
+
+# Limit runtime (10 min max to avoid server hang)
+ulimit -t 600
+
+echo &quot;=== Creating Jenkins backup ===&quot;
+rm -rf &quot;$BACKUP_DIR&quot;
+mkdir -p &quot;$BACKUP_DIR/data&quot;
+
+# Copy important Jenkins data, EXCLUDING workspace (prevents infinite loop)
+echo &quot;Copying Jenkins data...&quot;
+rsync -a --exclude &apos;workspace&apos; &quot;$JENKINS_HOME/&quot; &quot;$BACKUP_DIR/data/&quot;
+
+# Compress backup into tar.gz
+echo &quot;Creating tar archive...&quot;
+tar -czf &quot;$BACKUP_DIR/$BACKUP_FILE&quot; -C &quot;$BACKUP_DIR/data&quot; .
+
+# Git configuration
+git config --global user.name &quot;jenkins&quot;
+git config --global user.email &quot;mdnisarga2@gmail.com&quot;
+
+# Clone your GitHub repo (via SSH)
+cd &quot;$BACKUP_DIR&quot;
+echo &quot;Cloning GitHub repository...&quot;
+git clone --depth=1 &quot;$GIT_REPO&quot; repo
+
+cd repo
+
+# Copy the tar.gz file into repo
+cp &quot;../$BACKUP_FILE&quot; .
+
+# Auto-cleanup: Keep only last 5 backups, delete older ones
+echo &quot;Cleaning up old backups (keeping last 5)...&quot;
+ls -t jenkins_backup_*.tar.gz | tail -n +6 | xargs -r rm -f || true
+
+# Commit and push changes (tag commits to avoid webhook loops)
+git add .
+git commit -m &quot;[jenkins-backup] Automated backup on $DATE&quot; || echo &quot;No changes to commit&quot;
+git push origin &quot;$BRANCH&quot;
+
+echo &quot;=== Backup pushed successfully to GitHub! ===&quot;
+</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

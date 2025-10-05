@@ -1,0 +1,27 @@
+Started by user [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/Jenkins-Backup
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/mdnisarga9/pipline.git
+ > git init /var/lib/jenkins/workspace/Jenkins-Backup # timeout=10
+Fetching upstream changes from https://github.com/mdnisarga9/pipline.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/mdnisarga9/pipline.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mdnisarga9/pipline.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 5ef36529b2c7ee6f7cd6d9849359fba131c5fb44 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5ef36529b2c7ee6f7cd6d9849359fba131c5fb44 # timeout=10
+Commit message: "jenkinsfile new"
+First time build. Skipping changelog.
+[Jenkins-Backup] $ /bin/sh -xe /tmp/jenkins9289631234767370685.sh
++ pipeline '{'
+/tmp/jenkins9289631234767370685.sh: line 2: pipeline: command not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
