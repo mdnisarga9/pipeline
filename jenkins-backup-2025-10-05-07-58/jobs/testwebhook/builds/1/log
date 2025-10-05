@@ -1,0 +1,30 @@
+Started by GitHub push by mdnisarga9
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/testwebhook
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/mdnisarga9/c-project.git
+ > git init /var/lib/jenkins/workspace/testwebhook # timeout=10
+Fetching upstream changes from https://github.com/mdnisarga9/c-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/mdnisarga9/c-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mdnisarga9/c-project.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 42b85a1a0d55914cafe7996632c75d4018d2c655 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 42b85a1a0d55914cafe7996632c75d4018d2c655 # timeout=10
+Commit message: "git test1"
+First time build. Skipping changelog.
+[testwebhook] $ /bin/sh -xe /tmp/jenkins10923653186861588655.sh
++ echo 'Building project...'
+Building project...
++ gcc hello.c -o hello
+/usr/bin/ld: /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

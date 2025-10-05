@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 17
+Specification-Title: Jenkins CVS Plug-in
+Specification-Version: 0.0
+Implementation-Title: Jenkins CVS Plug-in
+Implementation-Version: 483.v69a_98dfd973b_
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: cvs
+Short-Name: cvs
+Long-Name: Jenkins CVS Plug-in
+Url: https://github.com/jenkinsci/cvs-plugin
+Plugin-Version: 483.v69a_98dfd973b_
+Hudson-Version: 2.479.3
+Jenkins-Version: 2.479.3
+Plugin-Dependencies: asm-api:9.8-135.vb_2239d08ee90,jsch:0.2.16-95.v3eec
+ b_55fa_b_78
+Plugin-Developers: Kohsuke Kawaguchi:kohsuke:,Michael Clarke:mc1arke:
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/cvs-plugin.gi
+ t
+Plugin-ScmTag: 69a98dfd973b5de343cdc5d247fa15d99dd85969
+Plugin-ScmUrl: https://github.com/jenkinsci/cvs-plugin
+Implementation-Build: 69a98dfd973b5de343cdc5d247fa15d99dd85969
+

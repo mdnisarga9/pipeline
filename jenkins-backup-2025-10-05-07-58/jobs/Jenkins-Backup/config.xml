@@ -1,0 +1,85 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Automate Jenkins job</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@5.7.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/mdnisarga9/pipline.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/main</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>H 18 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>pipeline {
+    agent any
+    environment {
+        BACKUP_DIR = &quot;/tmp/jenkins_backup&quot;
+        DATE = sh(script: &quot;date +%F_%H-%M&quot;, returnStdout: true).trim()
+        TAR_FILE = &quot;jenkins_backup_${DATE}.tar.gz&quot;
+        GIT_REPO = &quot;git@github.com:mdnisarga9/pipline.git&quot;
+    }
+    stages {
+        stage(&apos;Backup Jenkins&apos;) {
+            steps {
+                script {
+                    sh &apos;&apos;&apos;
+                        # Clean backup dir
+                        rm -rf $BACKUP_DIR
+                        mkdir -p $BACKUP_DIR
+
+                        # Create tar.gz of JENKINS_HOME
+                        tar -czf $BACKUP_DIR/$TAR_FILE -C $JENKINS_HOME .
+                    &apos;&apos;&apos;
+                }
+            }
+        }
+        stage(&apos;Push to GitHub&apos;) {
+            steps {
+                script {
+                    sh &apos;&apos;&apos;
+                        cd /tmp
+                        rm -rf repo_clone
+                        git clone $GIT_REPO repo_clone
+                        cp $BACKUP_DIR/$TAR_FILE repo_clone/
+
+                        cd repo_clone
+                        git config user.email &quot;you@example.com&quot;
+                        git config user.name &quot;Jenkins Backup Bot&quot;
+
+                        git add .
+                        git commit -m &quot;Jenkins backup on $(date)&quot;
+                        git push origin main || git push origin master
+                    &apos;&apos;&apos;
+                }
+            }
+        }
+    }
+}</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
