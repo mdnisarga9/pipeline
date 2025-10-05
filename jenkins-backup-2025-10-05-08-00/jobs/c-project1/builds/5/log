@@ -1,0 +1,23 @@
+Started by user [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/c-project1
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/c-project1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mdnisarga9/c-project.git # timeout=10
+Fetching upstream changes from https://github.com/mdnisarga9/c-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/mdnisarga9/c-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision ac79a0e2ff83a67b469e8fe6d0dcd3ed92cd831e (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ac79a0e2ff83a67b469e8fe6d0dcd3ed92cd831e # timeout=10
+Commit message: "hi"
+ > git rev-list --no-walk 35465ae239290200697567de9b73dc4f672ce1d6 # timeout=10
+[c-project1] $ /bin/sh -xe /tmp/jenkins16205885259393892500.sh
++ cd /var/lib/jenkins/c-project1
+/tmp/jenkins16205885259393892500.sh: line 2: cd: /var/lib/jenkins/c-project1: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

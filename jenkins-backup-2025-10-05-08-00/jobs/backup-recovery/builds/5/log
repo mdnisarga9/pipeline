@@ -1,0 +1,6 @@
+Started by user [8mha:////4M8UqzvRBC1E9kLQlShlNcVxUn9yEs19J0+Wr2OfGk3PAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9vMzixKL0RABpZ2olwgAAAA==[0mnisarga
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/backup-recovery
+[backup-recovery] $ /bin/bash /tmp/jenkins9844328428218868509.sh
+Creating backup directory at: /var/lib/jenkins/workspace/backup-recovery/git-backup/jenkins-backup-2025-10-05-08-00
+Copying Jenkins data...

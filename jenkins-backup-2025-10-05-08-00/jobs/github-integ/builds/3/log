@@ -1,0 +1,98 @@
+Started by GitHub push by mdnisarga9
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/github-integ
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/github-integ/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mdnisarga9/c-project.git # timeout=10
+Fetching upstream changes from https://github.com/mdnisarga9/c-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/mdnisarga9/c-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 42b85a1a0d55914cafe7996632c75d4018d2c655 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 42b85a1a0d55914cafe7996632c75d4018d2c655 # timeout=10
+Commit message: "git test1"
+ > git rev-list --no-walk 9a15dbc5e65f305fb7e59eb03855e21c9e9649c3 # timeout=10
+[github-integ] $ /bin/sh -xe /tmp/jenkins12248393910727714140.sh
++ git log
+commit 42b85a1a0d55914cafe7996632c75d4018d2c655
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 12:40:29 2025 +0000
+
+    git test1
+
+commit 9a15dbc5e65f305fb7e59eb03855e21c9e9649c3
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 12:21:17 2025 +0000
+
+    git test
+
+commit cae3e95fecb53f25cab44dbb7206e37dacbff7f6
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:27:47 2025 +0000
+
+    hi
+
+commit 3987da94e9c40c2bfc96cffdc4eb863cbb233ff8
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:25:46 2025 +0000
+
+    hi n
+
+commit 3827f7c383763313a35577eb272ce3a04bf750fa
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:22:08 2025 +0000
+
+    hi c c
+
+commit b11cdc9dec74c7092a73e7020da990477f6e2bb3
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:19:23 2025 +0000
+
+    new hi nis
+
+commit 5b3bb07987b1cdd05c6e2b70e13b22b8c9b043d3
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:13:37 2025 +0000
+
+    new hi hi
+
+commit 9810d62a3572505a99c46efd29c735069166eaf9
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:12:03 2025 +0000
+
+    new hi
+
+commit ac79a0e2ff83a67b469e8fe6d0dcd3ed92cd831e
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sun Sep 28 11:03:03 2025 +0000
+
+    hi
+
+commit 246a290fd190519bdcc2b7e2fc1fda0ba472827e
+Author: mdnisarga9 <mdnisarga2@gmail.com>
+Date:   Sun Sep 28 16:25:01 2025 +0530
+
+    Create Hi.c
+
+commit 35465ae239290200697567de9b73dc4f672ce1d6
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Sat Sep 27 14:34:13 2025 +0000
+
+    hello
+
+commit 7af2a0890f04a84e5e06faa652f3f341ae5d4d8b
+Author: Cloud User <ec2-user@ip-172-31-8-13.ap-south-1.compute.internal>
+Date:   Mon Sep 22 09:05:23 2025 +0000
+
+    c-project
+
+commit 0486202c1aae814e9b3ff74a8383ff53f9f98c99
+Author: mdnisarga2-coder <mdnisarga2@gmail.com>
+Date:   Mon Sep 22 14:27:48 2025 +0530
+
+    Create test file
+Finished: SUCCESS
